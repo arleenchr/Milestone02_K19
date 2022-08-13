@@ -30,7 +30,7 @@ class _BantuanState extends State<Bantuan> {
                 icon: Icon(Icons.arrow_back_rounded, color: Color(0xFF1F1656), size: 32.0),
                 padding: const EdgeInsets.fromLTRB(0, 6.5, 5, 0),
                 constraints: BoxConstraints(),
-                onPressed: () {},
+                onPressed: () {Navigator.of(context).pop(context);},
               ),
               SizedBox(width: 7),
               Text('Bantuan', style: TextStyle(fontFamily: "Nunito", fontSize: 40, fontWeight: FontWeight.w800, color: Color(0xFF1F1656)),),
