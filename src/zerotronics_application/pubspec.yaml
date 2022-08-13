@@ -94,4 +94,4 @@ fonts:
       - asset: assets/nunito/Nunito-Bold.ttf
         weight: 700
       - asset: assets/nunito/Nunito-ExtraBold.ttf
-        weight: 1400
+        weight: 800
