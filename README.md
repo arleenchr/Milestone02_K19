@@ -12,7 +12,7 @@
 9. Moh. Aghna Maysan Abyan (16521014)
 10. Hafidz Shidqi (16521292)
 11. Dhafin Ghalib Luqman Hakim (16521546)
-12. Bintang Dwi Marthen (16521451)
+12. Bintang Dwi Marthen (16521451), Laman Bantuan
 13. Althaaf Khasyi Atisomya (16521007)
 14. Carissa Zahrani Putri (16521269)
 
