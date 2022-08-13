@@ -1,16 +1,3 @@
-# loginpage
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Belum bisa digunakan karena belum ada akun yang terhubung ke database
+Menghilangkan fitur login dengan google dan nomor telp karena keterbatasan otak yang belum memadai (sudah nonton youtube berkali-kali tapi gagal paham :")
+Sekiranya ada yang jago POST API untuk menghubungkan data dan authentication agar bisa login, mohon diajari
