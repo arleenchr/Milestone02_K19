@@ -10,7 +10,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text("TEST ZEROTRONICS"),
+          child: Container(
+            color: Color.fromARGB(255, 36, 6, 103),
+            width: double.infinity,
+            height: double.infinity,
+            child: Image(image: AssetImage("logo.png")),
+            
+          ),
         ),
       ),
     );
