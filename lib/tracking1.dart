@@ -1,7 +1,9 @@
 // ignore_for_file: unnecessary_new
 
 import 'package:flutter/material.dart';
+import 'package:zerotronics_tracking/home.dart';
 import 'package:zerotronics_tracking/hubungipetugas.dart';
+import 'dart:async';
 
 void main() {
   runApp(Tracking1());
@@ -101,22 +103,39 @@ class Tracking1 extends StatelessWidget {
                                 text:
                                     "Petugas sampai di pusat pengelolaan sampah.\n"),
                             new TextSpan(text: "Pembuangan sampah selesai!"),
-                          ])))
-                  //child: Text(
-                  //  '''
-                  //  Konfirmasi pembuangan sampah.\n
-                  //  Petugas sedang menuju lokasi Anda.\n
-                  //  Petugas sampai di lokasi Anda.\n
-                  //  Petugas sedang menuju pusat pengelolaan sampah.\n
-                  //  Petugas sampai di pusat pengelolaan sampah.\n
-                  //  Pembuangan sampah selesai!''',
-                  //  style: TextStyle(fontSize: 12.0),
-                  //),
-                  ))
+                          ]))))),
+          Positioned(
+            top: 320.0,
+            left: 10.0,
+            child: Container(
+              width: 340.0,
+              height: 185.0,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                  color: Colors.blue[50]),
+              child: const Image(
+                fit: BoxFit.cover,
+                image: AssetImage('images/map_zerotronics.png'),
+              ),
+            ),
+          ),
+          Positioned(
+              top: 510.0,
+              left: 10.0,
+              child: SizedBox(
+                  height: 40.0,
+                  width: 340.0,
+                  child: new ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          primary: Colors.red,
+                          side: BorderSide(width: 10.0, color: Colors.red)),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Home()),
+                        );
+                      },
+                      child: const Text("Batal Buang Sampah")))),
         ]));
   }
 }
-
-
-//Center(
-        
