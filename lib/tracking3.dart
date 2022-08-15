@@ -6,13 +6,13 @@ import 'package:zerotronics_tracking/hubungipetugas.dart';
 import 'dart:async';
 
 import 'package:zerotronics_tracking/tracking2.dart';
-import 'package:zerotronics_tracking/tracking3.dart';
+import 'package:zerotronics_tracking/tracking4.dart';
 
 void main() {
-  runApp(Tracking2());
+  runApp(Tracking3());
 }
 
-class Tracking2 extends StatelessWidget {
+class Tracking3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +28,7 @@ class Tracking2 extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Tracking3()),
+                  MaterialPageRoute(builder: (context) => Tracking4()),
                 );
               },
             )
@@ -114,17 +114,33 @@ class Tracking2 extends StatelessWidget {
                               text: "Petugas sedang menuju lokasi Anda.\n",
                             ),
                             new TextSpan(
-                                text: "Petugas sampai di lokasi Anda.\n",
-                                style:
-                                    new TextStyle(fontWeight: FontWeight.bold)),
+                                text: "Petugas sampai di lokasi Anda.\n"),
                             new TextSpan(
                                 text:
-                                    "Petugas sedang menuju pusat pengelolaan sampah.\n"),
+                                    "Petugas sedang menuju pusat pengelolaan sampah.\n",
+                                style:
+                                    new TextStyle(fontWeight: FontWeight.bold)),
                             new TextSpan(
                                 text:
                                     "Petugas sampai di pusat pengelolaan sampah.\n"),
                             new TextSpan(text: "Pembuangan sampah selesai!"),
                           ]))))),
+          // gambar peta:
+          Positioned(
+            top: 320.0,
+            left: 10.0,
+            child: Container(
+              width: 340.0,
+              height: 185.0,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                  color: Colors.blue[50]),
+              child: const Image(
+                fit: BoxFit.cover,
+                image: AssetImage('images/map_zerotronics.png'),
+              ),
+            ),
+          ),
           // tombol cancel:
           Positioned(
               top: 510.0,

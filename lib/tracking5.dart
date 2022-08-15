@@ -9,30 +9,15 @@ import 'package:zerotronics_tracking/tracking2.dart';
 import 'package:zerotronics_tracking/tracking3.dart';
 
 void main() {
-  runApp(Tracking2());
+  runApp(Tracking5());
 }
 
-class Tracking2 extends StatelessWidget {
+class Tracking5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text('Tracking'),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(
-                IconData(0xe09c,
-                    fontFamily: 'MaterialIcons', matchTextDirection: true),
-                color: Colors.white,
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Tracking3()),
-                );
-              },
-            )
-          ],
         ),
         body: Stack(alignment: Alignment.center, children: <Widget>[
           // profil petugas:
@@ -114,16 +99,17 @@ class Tracking2 extends StatelessWidget {
                               text: "Petugas sedang menuju lokasi Anda.\n",
                             ),
                             new TextSpan(
-                                text: "Petugas sampai di lokasi Anda.\n",
-                                style:
-                                    new TextStyle(fontWeight: FontWeight.bold)),
+                                text: "Petugas sampai di lokasi Anda.\n"),
                             new TextSpan(
                                 text:
                                     "Petugas sedang menuju pusat pengelolaan sampah.\n"),
                             new TextSpan(
                                 text:
                                     "Petugas sampai di pusat pengelolaan sampah.\n"),
-                            new TextSpan(text: "Pembuangan sampah selesai!"),
+                            new TextSpan(
+                                text: "Pembuangan sampah selesai!",
+                                style:
+                                    new TextStyle(fontWeight: FontWeight.bold)),
                           ]))))),
           // tombol cancel:
           Positioned(
@@ -134,25 +120,19 @@ class Tracking2 extends StatelessWidget {
                   width: 340.0,
                   child: new ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          primary: Colors.red,
-                          side: BorderSide(width: 10.0, color: Colors.red)),
+                          primary: Colors.green,
+                          side: BorderSide(width: 10.0, color: Colors.green)),
                       onPressed: () {
                         showDialog(
                             context: context,
                             builder: (context) {
                               return AlertDialog(
-                                title: Text('Peringatan'),
+                                title: Text('Konfirmasi'),
                                 content: Text(
-                                    'Apakah Anda yakin ingin membatalkan pembuangan sampah?'),
+                                    'Pembuangan Sampah Anda telah selesai! Terima kasih!'),
                                 actions: <Widget>[
                                   TextButton(
-                                    child: Text('Tidak'),
-                                    onPressed: () {
-                                      Navigator.of(context).pop();
-                                    },
-                                  ),
-                                  TextButton(
-                                    child: Text('Ya'),
+                                    child: Text('OK'),
                                     onPressed: () {
                                       Navigator.of(context).pop();
                                       Navigator.push(
@@ -166,7 +146,7 @@ class Tracking2 extends StatelessWidget {
                               );
                             });
                       },
-                      child: const Text("Batal Buang Sampah")))),
+                      child: const Text("Buang Sampah Selesai")))),
         ]));
   }
 }

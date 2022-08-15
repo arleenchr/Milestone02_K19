@@ -5,6 +5,8 @@ import 'package:zerotronics_tracking/home.dart';
 import 'package:zerotronics_tracking/hubungipetugas.dart';
 import 'dart:async';
 
+import 'package:zerotronics_tracking/tracking2.dart';
+
 void main() {
   runApp(Tracking1());
 }
@@ -15,8 +17,24 @@ class Tracking1 extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text('Tracking'),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(
+                IconData(0xe09c,
+                    fontFamily: 'MaterialIcons', matchTextDirection: true),
+                color: Colors.white,
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Tracking2()),
+                );
+              },
+            )
+          ],
         ),
         body: Stack(alignment: Alignment.center, children: <Widget>[
+          // profil petugas:
           Positioned(
               top: 5.0,
               left: 10.0,
@@ -25,7 +43,6 @@ class Tracking1 extends StatelessWidget {
                 child: Container(
                   height: 100.0,
                   width: 340.0,
-                  //color: Colors.orange[600],
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(10.0)),
                       color: Colors.orange[600]),
@@ -50,6 +67,7 @@ class Tracking1 extends StatelessWidget {
                   ),
                 ),
               )),
+          // tombol hubungi petugas:
           Positioned(
               top: 115.0,
               left: 10.0,
@@ -68,6 +86,7 @@ class Tracking1 extends StatelessWidget {
                         );
                       },
                       child: const Text("Hubungi Petugas")))),
+          // tracking:
           Positioned(
               top: 160.0,
               left: 10.0,
@@ -104,6 +123,7 @@ class Tracking1 extends StatelessWidget {
                                     "Petugas sampai di pusat pengelolaan sampah.\n"),
                             new TextSpan(text: "Pembuangan sampah selesai!"),
                           ]))))),
+          // gambar peta:
           Positioned(
             top: 320.0,
             left: 10.0,
@@ -119,6 +139,7 @@ class Tracking1 extends StatelessWidget {
               ),
             ),
           ),
+          // tombol cancel:
           Positioned(
               top: 510.0,
               left: 10.0,
@@ -130,10 +151,34 @@ class Tracking1 extends StatelessWidget {
                           primary: Colors.red,
                           side: BorderSide(width: 10.0, color: Colors.red)),
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => Home()),
-                        );
+                        showDialog(
+                            context: context,
+                            builder: (context) {
+                              return AlertDialog(
+                                title: Text('Peringatan'),
+                                content: Text(
+                                    'Apakah Anda yakin ingin membatalkan pembuangan sampah?'),
+                                actions: <Widget>[
+                                  TextButton(
+                                    child: Text('Tidak'),
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                  ),
+                                  TextButton(
+                                    child: Text('Ya'),
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => Home()),
+                                      );
+                                    },
+                                  ),
+                                ],
+                              );
+                            });
                       },
                       child: const Text("Batal Buang Sampah")))),
         ]));

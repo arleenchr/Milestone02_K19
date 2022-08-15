@@ -7,12 +7,13 @@ import 'dart:async';
 
 import 'package:zerotronics_tracking/tracking2.dart';
 import 'package:zerotronics_tracking/tracking3.dart';
+import 'package:zerotronics_tracking/tracking5.dart';
 
 void main() {
-  runApp(Tracking2());
+  runApp(Tracking4());
 }
 
-class Tracking2 extends StatelessWidget {
+class Tracking4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +29,7 @@ class Tracking2 extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Tracking3()),
+                  MaterialPageRoute(builder: (context) => Tracking5()),
                 );
               },
             )
@@ -114,15 +115,15 @@ class Tracking2 extends StatelessWidget {
                               text: "Petugas sedang menuju lokasi Anda.\n",
                             ),
                             new TextSpan(
-                                text: "Petugas sampai di lokasi Anda.\n",
-                                style:
-                                    new TextStyle(fontWeight: FontWeight.bold)),
+                                text: "Petugas sampai di lokasi Anda.\n"),
                             new TextSpan(
                                 text:
                                     "Petugas sedang menuju pusat pengelolaan sampah.\n"),
                             new TextSpan(
                                 text:
-                                    "Petugas sampai di pusat pengelolaan sampah.\n"),
+                                    "Petugas sampai di pusat pengelolaan sampah.\n",
+                                style:
+                                    new TextStyle(fontWeight: FontWeight.bold)),
                             new TextSpan(text: "Pembuangan sampah selesai!"),
                           ]))))),
           // tombol cancel:
