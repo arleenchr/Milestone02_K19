@@ -1,4 +1,4 @@
-import 'package:aplikasi_alpha/login_page.dart';
+//import 'package:aplikasi_alpha/login_page.dart';
 import 'package:flutter/material.dart';
 
 Color textField = Color.fromARGB(234, 211, 210, 224);
