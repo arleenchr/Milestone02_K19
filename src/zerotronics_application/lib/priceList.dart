@@ -14,7 +14,12 @@ List<String> namaItem = [
 ];
 List<int> pointItem = [1000, 200, 500, 100, 100];
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -47,12 +52,17 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class priceItem extends StatelessWidget {
+class priceItem extends StatefulWidget {
   final String item;
   final int point;
 
   priceItem({this.item, this.point});
 
+  @override
+  State<priceItem> createState() => _priceItemState();
+}
+
+class _priceItemState extends State<priceItem> {
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -68,7 +78,7 @@ class priceItem extends StatelessWidget {
               margin: EdgeInsets.only(bottom: 3),
               alignment: Alignment.bottomCenter,
               child: Text(
-                "${point} point",
+                "${widget.point} point",
                 style: TextStyle(
                     fontFamily: 'Nunito',
                     fontWeight: FontWeight.w700,
@@ -87,7 +97,7 @@ class priceItem extends StatelessWidget {
             child: Container(
               alignment: Alignment.center,
               child: Text(
-                "${item}",
+                "${widget.item}",
                 style: TextStyle(
                     fontFamily: 'Nunito',
                     fontWeight: FontWeight.w700,
