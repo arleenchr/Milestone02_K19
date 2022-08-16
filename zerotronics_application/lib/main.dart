@@ -1,28 +1,13 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart';
+import 'package:zerotronics_application/welcome.dart';
+
 void main() {
   runApp(MyApp());
 }
 
-// class MyApp extends StatelessWidget {
-//   const MyApp({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'Nunito',
-//       // Set Raleway as the default app font.
-//       theme: ThemeData(fontFamily: 'Nunito'),
-//       home: const HomePage(),
-//     );
-//   }
-// }
-
 class MyApp extends StatelessWidget {
-  @override 
+  @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePage(),
-    );
+    return MaterialApp(home: Welcome());
   }
 }
