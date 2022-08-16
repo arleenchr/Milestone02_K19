@@ -9,7 +9,7 @@
 6. Akmal Natha Abhirama (16521368)
 7. Kevin John Wesley Hutabarat (16521168)
 8. Muhammad Rafi Haidar (16521422)
-9. Moh. Aghna Maysan Abyan (16521014)
+9. Moh. Aghna Maysan Abyan (16521014), Home
 10. Hafidz Shidqi (16521292)
 11. Dhafin Ghalib Luqman Hakim (16521546)
 12. Bintang Dwi Marthen (16521451), Laman Bantuan
