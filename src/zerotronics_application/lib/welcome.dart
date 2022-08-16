@@ -14,28 +14,34 @@ class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: GestureDetector(
-          onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => login_or_signup()));} , //buat ke login/signup
-          child: Container(
-            color: Color.fromARGB(255,36,6,103),
-            width: double.infinity,
-            height: double.infinity,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image(image: AssetImage('logo.png')),
-                SizedBox(height:40),
-                Container(
-                  alignment: Alignment.bottomCenter,
-                  child: Text('tap to continue ...', style: TextStyle(fontFamily: "Nunito", fontSize: 13, fontWeight: FontWeight.w300, color: Color(0xFFDAD9E1).withOpacity(0.6)))
-                )
-              ],
-            ),
-          )
-        )
-      )
-    );
+        body: Center(
+            child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => login_or_signup()));
+                }, //buat ke login/signup
+                child: Container(
+                  color: Color.fromARGB(255, 36, 6, 103),
+                  width: double.infinity,
+                  height: double.infinity,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image(image: AssetImage('assets/logo.png')),
+                      SizedBox(height: 40),
+                      Container(
+                          alignment: Alignment.bottomCenter,
+                          child: Text('tap to continue ...',
+                              style: TextStyle(
+                                  fontFamily: "Nunito",
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w300,
+                                  color: Color(0xFFDAD9E1).withOpacity(0.6))))
+                    ],
+                  ),
+                ))));
   }
-} 
+}

@@ -54,7 +54,7 @@ class _LoginComponent extends State<LoginComponent> {
                   height: SizeConfig.screenHeight * 0.04,
                 ),
                 Image.asset(
-                  "login.png",
+                  "assets/login.png",
                   height: 200,
                   width: 300,
                 ),
@@ -133,10 +133,12 @@ class _SignInForm extends State<SignInform> {
           DefaultButtonCustomeColor(
             color: Color(0xFF1F1656),
             text: "Login",
-            press: () {Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Home()),
-                  );},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Home()),
+              );
+            },
           ),
           SizedBox(
             height: 20,

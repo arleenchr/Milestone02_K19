@@ -39,10 +39,10 @@ class _SignUpPageState extends State<SignUpPage> {
       child: Row(
         children: <Widget>[
           Container(
-            width: 300,
+            width: 260,
             height: 300,
             padding: EdgeInsets.only(left: 0, top: 100, bottom: 10),
-            child: Image(image: AssetImage("signup.png")),
+            child: Image(image: AssetImage("assets/signup.png")),
           ),
         ],
       ),
