@@ -42,7 +42,7 @@ class _SignUpPageState extends State<SignUpPage> {
             width: 300,
             height: 300,
             padding: EdgeInsets.only(left: 0, top: 100, bottom: 10),
-            child: Image(image: AssetImage("assets/signup.png")),
+            child: Image(image: AssetImage("signup.png")),
           ),
         ],
       ),
@@ -125,7 +125,7 @@ class _SignUpPageState extends State<SignUpPage> {
     return InkWell(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => LoginPage()));
+            context, MaterialPageRoute(builder: (context) => LoginScreen()));
       },
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 50),
