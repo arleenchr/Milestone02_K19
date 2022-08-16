@@ -10,17 +10,22 @@ List<String> namaItem = [
   'Peralatan Rumah Tangga Kecil',
   'Peralatan Elektronik',
   'Alat Penerangan',
-  'Baterai',
+  'Baterai'
 ];
 List<String> descriptionItem = [
   'lemari es/freezer, mesin cuci, mesin pencuci piring',
   'pemanggang roti, pembuat kopi, setrika, pengering rambut',
   'komputer pribadi, telepon, ponsel, laptop, printer, pemindai',
   'lampu tidur, lampu bohlam, berbagai jenis senter, beragam jenis baterai, dll.',
-  'mesin pelempar bola otomatis, mobil remote control, dll.',
+  'mesin pelempar bola otomatis, mobil remote control, dll.'
 ];
 
-class Klasifikasi extends StatelessWidget {
+class Klasifikasi extends StatefulWidget {
+  @override
+  State<Klasifikasi> createState() => _KlasifikasiState();
+}
+
+class _KlasifikasiState extends State<Klasifikasi> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -53,9 +58,9 @@ class Klasifikasi extends StatelessWidget {
           elevation: 0,
         ),
         body: ListView.builder(
-          itemCount: descriptionItem.length + 1,
+          itemCount: 5,
           itemBuilder: (context, index) {
-            return descItem(
+            return ClassItem(
                 namaItem: namaItem[index],
                 descriptionItem: descriptionItem[index]);
           },
@@ -65,11 +70,11 @@ class Klasifikasi extends StatelessWidget {
   }
 }
 
-class descItem extends StatelessWidget {
+class ClassItem extends StatelessWidget {
   final String namaItem;
   final String descriptionItem;
 
-  descItem({required this.namaItem, required this.descriptionItem});
+  ClassItem({required this.namaItem, required this.descriptionItem});
 
   @override
   Widget build(BuildContext context) {
