@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:zerotronics_application/home.dart';
+import 'package:zerotronics_application/signup.dart';
 
 // FUNGSI UTAMA
 void main() async {
@@ -144,12 +145,38 @@ class _SignInForm extends State<SignInform> {
             height: 20,
           ),
           GestureDetector(
-            onTap: () {},
-            child: Text(
-              "Belum Punya Akun ? Daftar Disini",
-              style: TextStyle(decoration: TextDecoration.underline),
-            ),
-          )
+              onTap: () {},
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SignUpPage()));
+                },
+                child: Container(
+                  margin: EdgeInsets.symmetric(vertical: 50),
+                  padding: EdgeInsets.all(20),
+                  alignment: Alignment.bottomCenter,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        'Do not have an account?',
+                        style: TextStyle(
+                            fontSize: 13, fontWeight: FontWeight.w500),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        'Sign Up here!',
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 31, 22, 86),
+                            fontSize: 13,
+                            fontWeight: FontWeight.w600),
+                      ),
+                    ],
+                  ),
+                ),
+              ))
         ],
       ),
     );

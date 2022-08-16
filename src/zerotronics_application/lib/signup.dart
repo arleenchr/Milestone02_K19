@@ -1,5 +1,8 @@
+// ignore_for_file: unnecessary_new
+
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:zerotronics_application/home.dart';
 import 'package:zerotronics_application/login.dart';
 //import 'loginPage.dart';
 //import 'package:google_fonts/google_fonts.dart';
@@ -49,26 +52,6 @@ class _SignUpPageState extends State<SignUpPage> {
     );
   }
 
-//   Widget _signUpImage() {
-//    return Container(
-//      child: ListView(
-//        children: <Widget>[
-//          Container(
-//            width: 200,
-//            height: 200,
-//            alignment: Alignment(0.0, 1.15),
-//            decoration: new BoxDecoration(
-//              image: new DecorationImage(
-//                image: AssetImage("assets/signup.png"),
-//                fit: BoxFit.fitHeight,
-//              ),
-//            ),
-//          ),
-//        ],
-//      ),
-//    );
-//  }
-
   Widget _entryField(String title, {bool isPassword = false}) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 5),
@@ -94,31 +77,41 @@ class _SignUpPageState extends State<SignUpPage> {
   }
 
   Widget _submitButton() {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      padding: EdgeInsets.symmetric(vertical: 15),
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(5)),
-          boxShadow: <BoxShadow>[
-            BoxShadow(
-                color: Colors.grey.shade200,
-                offset: Offset(2, 4),
-                blurRadius: 5,
-                spreadRadius: 2)
-          ],
-          gradient: LinearGradient(
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
-              colors: [
-                Color.fromARGB(255, 31, 22, 86),
-                Color.fromARGB(255, 145, 139, 180)
-              ])),
-      child: Text(
-        'Sign Up',
-        style: TextStyle(fontSize: 20, color: Colors.white),
-      ),
-    );
+    return TextButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Home()),
+          );
+        },
+        child: Container(
+          width: 350.0,
+          padding: EdgeInsets.symmetric(vertical: 15),
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(5)),
+              boxShadow: <BoxShadow>[
+                BoxShadow(
+                    color: Colors.grey.shade200,
+                    offset: Offset(2, 4),
+                    blurRadius: 5,
+                    spreadRadius: 2)
+              ],
+              // ignore: prefer_const_constructors
+              gradient: LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: [
+                    Color.fromARGB(255, 31, 22, 86),
+                    Color.fromARGB(255, 145, 139, 180)
+                  ])),
+          child: Text('Sign Up',
+              style: TextStyle(
+                  fontFamily: "Nunito",
+                  fontSize: 20,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600)),
+        ));
   }
 
   Widget _loginAccountLabel() {
@@ -160,7 +153,7 @@ class _SignUpPageState extends State<SignUpPage> {
       text: TextSpan(
         text: 'Sign Up',
         style: TextStyle(
-            fontFamily: 'Nunito',
+            fontFamily: "Nunito",
             fontSize: 30,
             fontWeight: FontWeight.w700,
             color: Color.fromARGB(255, 31, 22, 86)),

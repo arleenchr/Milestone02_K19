@@ -103,13 +103,12 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
 fonts:
-  - family: Nunito
-    fonts:
-      - asset: assets/nunito/Nunito-Regular.ttf
-      - asset: assets/nunito/Nunito-Bold.ttf
-        weight: 700
-      - asset: assets/nunito/Nunito-ExtraBold.ttf
-        weight: 800
-      - asset: assets/nunito/Nunito-Light.ttf
-        weight: 300
-
+- family: Nunito
+  fonts:
+    - asset: assets/nunito/Nunito-Regular.ttf
+    - asset: assets/nunito/Nunito-Bold.ttf
+      weight: 700
+    - asset: assets/nunito/Nunito-ExtraBold.ttf
+      weight: 800
+    - asset: assets/nunito/Nunito-Light.ttf
+      weight: 300
