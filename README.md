@@ -11,7 +11,7 @@
 8. Muhammad Rafi Haidar (16521422), Textfield
 9. Moh. Aghna Maysan Abyan (16521014), Home
 10. Hafidz Shidqi (16521292), Login
-11. Dhafin Ghalib Luqman Hakim (16521546), Map
+11. Dhafin Ghalib Luqman Hakim (16521546), Map, ReadMe
 12. Bintang Dwi Marthen (16521451), Laman Bantuan, merging/navigasi
 13. Althaaf Khasyi Atisomya (16521007), Profile & History
 14. Carissa Zahrani Putri (16521269), Welcome Page
@@ -20,5 +20,7 @@
 Contoh: Justin Bieber (13521999), Front end
 -->
 
-Cara menjalankan aplikasi:
-...
+Cara menjalankan aplikasi:  
+Berhubung aplikasi yang dibuat belum versi _FullRelease_ dan masih dalam tahapan _development_ (sejauh ini baru _FrontEnd_ kasar), untuk menjalankannya dapat menggunakan _terminal_, pengguna cukup memasukkan satu dari dua varian _command line_ berikut pada _terminal_:
+1. `flutter run -d chrome`
+2. `flutter run -d edge`
