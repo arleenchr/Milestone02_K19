@@ -2,12 +2,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:zerotronics_tracking/bantuan.dart';
-import 'package:zerotronics_tracking/buangSampah.dart';
-import 'package:zerotronics_tracking/hubungipetugas.dart';
-import 'package:zerotronics_tracking/klasifikasi.dart';
-import 'package:zerotronics_tracking/priceList.dart';
-import 'package:zerotronics_tracking/profile_page.dart';
+import 'package:zerotronics_application/bantuan.dart';
+import 'package:zerotronics_application/buangSampah.dart';
 
 void main() {
   runApp(Home());

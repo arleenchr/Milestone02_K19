@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_tawk/flutter_tawk.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(const HubungiPetugas());
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class HubungiPetugas extends StatelessWidget {
+  const HubungiPetugas({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
