@@ -141,7 +141,7 @@ class Tracking5 extends StatelessWidget {
                             style: new TextStyle(fontWeight: FontWeight.bold)),
                       ]))))),
 
-      // tombol cancel:
+      // tombol konfirmasi:
       Positioned(
           top: 590.0,
           left: 10.0,

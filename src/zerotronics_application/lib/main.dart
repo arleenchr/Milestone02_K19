@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zerotronics_application/buangSampah.dart';
 import 'package:zerotronics_application/welcome.dart';
 
 void main() {

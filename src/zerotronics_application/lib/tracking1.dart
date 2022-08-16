@@ -171,7 +171,7 @@ class Tracking1 extends StatelessWidget {
               color: Colors.blue[50]),
           child: const Image(
             fit: BoxFit.cover,
-            image: AssetImage('images/map_zerotronics.png'),
+            image: AssetImage('assets/map_zerotronics.png'),
           ),
         ),
       ),

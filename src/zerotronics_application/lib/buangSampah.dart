@@ -1,5 +1,9 @@
 //import 'package:aplikasi_alpha/login_page.dart';
+// ignore_for_file: unnecessary_new
+
 import 'package:flutter/material.dart';
+import 'package:zerotronics_application/home.dart';
+import 'package:zerotronics_application/tracking1.dart';
 
 Color textField = Color.fromARGB(234, 211, 210, 224);
 Color text = Color.fromARGB(234, 55, 50, 104);
@@ -27,21 +31,28 @@ class _BuangSampahState extends State<BuangSampah> {
                 margin: EdgeInsets.fromLTRB(0, 0, 0, 30),
                 child: Row(
                   children: [
-                    Container(
-                      width: 55,
-                      child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            primary: textField,
-                            onPrimary: Color.fromARGB(255, 229, 223, 223),
-                            elevation: 0.0,
-                            shadowColor: Colors.transparent,
+                    Positioned(
+                        top: 45.0,
+                        left: 5.0,
+                        child: Container(
+                            //color: Colors.green,
+                            child: IconButton(
+                          icon: const Icon(
+                            IconData(0xe092,
+                                fontFamily: 'MaterialIcons',
+                                matchTextDirection: true),
+                            color: Color.fromARGB(255, 31, 22, 86),
                           ),
-                          onPressed: null,
-                          child: Icon(Icons.arrow_back)),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Home()),
+                            );
+                          },
+                        ))),
+                    //SizedBox(
+                    //  width: 5,
+                    //),
                     Text(
                       "Buang Sampah",
                       style: TextStyle(
@@ -118,6 +129,71 @@ class _BuangSampahState extends State<BuangSampah> {
                   color: text,
                 ),
               ),
+              // gambar peta:
+              Positioned(
+                top: 400.0,
+                left: 10.0,
+                child: Container(
+                  width: 340.0,
+                  height: 185.0,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                      color: Colors.blue[50]),
+                  child: const Image(
+                    fit: BoxFit.cover,
+                    image: AssetImage('assets/map_zerotronics.png'),
+                  ),
+                ),
+              ),
+              // tombol konfirmasi:
+              Positioned(
+                  top: 590.0,
+                  left: 10.0,
+                  child: SizedBox(
+                      height: 40.0,
+                      width: 340.0,
+                      child: new ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              primary: Colors.green,
+                              side:
+                                  BorderSide(width: 10.0, color: Colors.green)),
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) {
+                                  return AlertDialog(
+                                    title: Text('Konfirmasi'),
+                                    content: Text(
+                                        'Apakah anda yakin ingin mengirimkan sampah ini?'),
+                                    actions: <Widget>[
+                                      TextButton(
+                                        child: Text('Tidak'),
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                      ),
+                                      TextButton(
+                                        child: Text('Ya'),
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    Tracking1()),
+                                          );
+                                        },
+                                      ),
+                                    ],
+                                  );
+                                });
+                          },
+                          child: const Text("Buang Sampah",
+                              style: TextStyle(
+                                  fontFamily: "Nunito",
+                                  fontSize: 16.0,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w800))))),
             ]),
           ])),
     );
