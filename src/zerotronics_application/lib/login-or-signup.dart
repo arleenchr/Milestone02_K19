@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:zerotronics_application/signup.dart';
+import 'package:zerotronics_application/login.dart';
 
 class login_or_signup extends StatefulWidget {
   const login_or_signup({super.key});
@@ -25,6 +27,10 @@ class _login_or_signupState extends State<login_or_signup> {
               borderRadius: BorderRadius.circular(12),
             ),
             onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()),
+                  );
               //ke login page;
             },
             child: Text(
@@ -45,6 +51,10 @@ class _login_or_signupState extends State<login_or_signup> {
               borderRadius: BorderRadius.circular(12),
             ),
             onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SignUpPage()),
+                  );
               //ke sign up page;
             },
             child: Text(
