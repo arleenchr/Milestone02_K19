@@ -5,9 +5,10 @@ import 'package:flutter/material.dart';
 
 import 'bantuan.dart';
 import 'home.dart';
+import 'main.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 // mohon maaf code nya tidak efektif & size nya masih ngikut
