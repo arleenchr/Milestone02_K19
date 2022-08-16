@@ -18,18 +18,21 @@ class _login_or_signupState extends State<login_or_signup> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Image.asset('assets/logo.png'),
-          FlatButton(
-            textColor: Color(0xFFF1F0F8),
-            color: Color(0xFF1F1656),
-            minWidth: 300,
-            height: 40,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
+          TextButton(
+            style: TextButton.styleFrom(
+              textStyle: TextStyle(
+                color: Color(0xFFF1F0F8)
+              ),
+              backgroundColor: Color(0xFF1F1656),
+              minimumSize: Size(300, 40),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              )
             ),
             onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => LoginPage()),
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
                   );
               //ke login page;
             },
@@ -42,13 +45,16 @@ class _login_or_signupState extends State<login_or_signup> {
               ),
             ),
           ),
-          FlatButton(
-            textColor: Color(0xFFF1F0F8),
-            color: Color(0xFF1F1656),
-            minWidth: 300,
-            height: 40,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
+          TextButton(
+            style: TextButton.styleFrom(
+              textStyle: TextStyle(
+                color: Color(0xFFF1F0F8)
+              ),
+              backgroundColor: Color(0xFF1F1656),
+              minimumSize: Size(300, 40),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+            )
             ),
             onPressed: () {
                   Navigator.push(
@@ -70,6 +76,4 @@ class _login_or_signupState extends State<login_or_signup> {
       ),
     );
   }
-  
-  FlatButton({required Color textColor, required Color color, required int minWidth, required int height, required RoundedRectangleBorder shape, required Null Function() onPressed, required Text child}) {}
 }
