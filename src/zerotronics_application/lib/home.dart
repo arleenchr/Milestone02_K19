@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:zerotronics_application/bantuan.dart';
 import 'package:zerotronics_application/buangSampah.dart';
+import 'package:zerotronics_application/chat.dart';
 import 'package:zerotronics_application/klasifikasi.dart';
 import 'package:zerotronics_application/priceList.dart';
 import 'package:zerotronics_application/profile.dart';
@@ -26,6 +27,25 @@ class Home extends StatelessWidget {
                   fontSize: 30.0,
                   color: Color.fromARGB(255, 31, 22, 86),
                   fontWeight: FontWeight.w800))),
+      // tombol HubungiPetugas:
+      Positioned(
+          top: 45.0,
+          left: 300.0,
+          child: Container(
+              //color: Colors.green,
+              child: IconButton(
+            icon: Icon(
+              IconData(0xf1c6,
+                  fontFamily: 'MaterialIcons', matchTextDirection: true),
+              color: Color.fromARGB(255, 31, 22, 86),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HubungiPetugas()),
+              );
+            },
+          ))),
       // profile:
       Positioned(
           top: 125.0,

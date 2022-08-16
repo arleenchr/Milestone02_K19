@@ -153,7 +153,7 @@ class _SignUpPageState extends State<SignUpPage> {
       text: TextSpan(
         text: 'Sign Up',
         style: TextStyle(
-            fontFamily: "Nunito",
+            fontFamily: 'Nunito',
             fontSize: 30,
             fontWeight: FontWeight.w700,
             color: Color.fromARGB(255, 31, 22, 86)),

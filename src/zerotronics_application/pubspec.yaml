@@ -75,6 +75,7 @@ flutter:
     - assets/map_zerotronics.png
     - assets/signup.png
     - assets/login.png
+    - assets/message.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
@@ -102,13 +103,13 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
 
-fonts:
-- family: Nunito
   fonts:
-    - asset: assets/nunito/Nunito-Regular.ttf
-    - asset: assets/nunito/Nunito-Bold.ttf
-      weight: 700
-    - asset: assets/nunito/Nunito-ExtraBold.ttf
-      weight: 800
-    - asset: assets/nunito/Nunito-Light.ttf
-      weight: 300
+    - family: Nunito
+      fonts:
+        - asset: assets/nunito/Nunito-Regular.ttf
+        - asset: assets/nunito/Nunito-Bold.ttf
+          weight: 700
+        - asset: assets/nunito/Nunito-ExtraBold.ttf
+          weight: 800
+        - asset: assets/nunito/Nunito-Light.ttf
+          weight: 300

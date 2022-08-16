@@ -337,7 +337,7 @@ class _DescriptionState extends State<Description> {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.fromLTRB(0, 5, 0, 50),
-      height: 62,
+      height: 65,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [

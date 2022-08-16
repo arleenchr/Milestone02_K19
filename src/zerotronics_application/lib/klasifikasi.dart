@@ -82,26 +82,28 @@ class ClassItem extends StatelessWidget {
       children: <Widget>[
         Container(
             margin: EdgeInsets.only(top: 20, left: 35, right: 35),
-            height: 70,
+            height: 100,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(10)),
               color: Color(0xFFEDC804),
             ),
             child: Container(
-              margin: EdgeInsets.only(bottom: 3),
-              alignment: Alignment.bottomCenter,
-              child: Text(
-                "${descriptionItem}",
-                style: TextStyle(
-                    fontFamily: 'Nunito',
-                    fontWeight: FontWeight.w700,
-                    color: Color(0xFF1F1656),
-                    fontSize: 10),
-              ),
-            )),
+                margin: EdgeInsets.only(bottom: 3),
+                alignment: Alignment.bottomCenter,
+                child: Center(
+                  child: Text(
+                    "\n\n\n\n\n${descriptionItem}",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontFamily: 'Nunito',
+                        fontWeight: FontWeight.w700,
+                        color: Color(0xFF1F1656),
+                        fontSize: 10),
+                  ),
+                ))),
         Container(
             margin: EdgeInsets.only(top: 20, left: 35, right: 35),
-            height: 45,
+            height: 65,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(10), topRight: Radius.circular(10)),
@@ -111,11 +113,12 @@ class ClassItem extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 "${namaItem}",
+                textAlign: TextAlign.center,
                 style: TextStyle(
                     fontFamily: 'Nunito',
                     fontWeight: FontWeight.w700,
                     color: Color(0xFF1F1656),
-                    fontSize: 16),
+                    fontSize: 18),
               ),
             )),
       ],
