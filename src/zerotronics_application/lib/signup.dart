@@ -1,7 +1,8 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'loginPage.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:zerotronics_application/login.dart';
+//import 'loginPage.dart';
+//import 'package:google_fonts/google_fonts.dart';
 
 class SignUpPage extends StatefulWidget {
   SignUpPage({Key? key, this.title}) : super(key: key);
@@ -216,4 +217,3 @@ class _SignUpPageState extends State<SignUpPage> {
     );
   }
 }
-

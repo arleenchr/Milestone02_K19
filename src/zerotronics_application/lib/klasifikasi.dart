@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zerotronics_application/home.dart';
 
 void main() {
   runApp(Klasifikasi());
@@ -35,8 +36,18 @@ class Klasifikasi extends StatelessWidget {
                 fontWeight: FontWeight.w800,
                 fontSize: 28.0),
           ),
-          leading: BackButton(
-            color: Color(0xFF1F1656),
+          leading: IconButton(
+            icon: Icon(
+              IconData(0xe092,
+                  fontFamily: 'MaterialIcons', matchTextDirection: true),
+              color: Color.fromARGB(255, 31, 22, 86),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Home()),
+              );
+            },
           ),
           backgroundColor: Colors.white,
           elevation: 0,
@@ -66,7 +77,7 @@ class descItem extends StatelessWidget {
       children: <Widget>[
         Container(
             margin: EdgeInsets.only(top: 20, left: 35, right: 35),
-            height: 80,
+            height: 70,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(10)),
               color: Color(0xFFEDC804),

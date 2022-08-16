@@ -4,6 +4,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:zerotronics_application/bantuan.dart';
 import 'package:zerotronics_application/buangSampah.dart';
+import 'package:zerotronics_application/klasifikasi.dart';
+import 'package:zerotronics_application/priceList.dart';
+import 'package:zerotronics_application/profile.dart';
 
 void main() {
   runApp(Home());
@@ -179,7 +182,7 @@ class Home extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(15.0))),
           child: const Image(
             fit: BoxFit.cover,
-            image: AssetImage('images/tongsampah.png'),
+            image: AssetImage('assets/tongsampah.png'),
           ),
         ),
       ),

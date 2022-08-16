@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'home.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(PriceList());
 }
 
 List<String> namaItem = [
@@ -14,12 +14,12 @@ List<String> namaItem = [
 ];
 List<int> pointItem = [1000, 200, 500, 100, 100];
 
-class MyApp extends StatefulWidget {
+class PriceList extends StatefulWidget {
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<PriceList> createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<PriceList> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -35,8 +35,18 @@ class _MyAppState extends State<MyApp> {
                 fontWeight: FontWeight.w800,
                 fontSize: 40),
           ),
-          leading: BackButton(
-            color: Color(0xFF1F1656),
+          leading: IconButton(
+            icon: Icon(
+              IconData(0xe092,
+                  fontFamily: 'MaterialIcons', matchTextDirection: true),
+              color: Color.fromARGB(255, 31, 22, 86),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Home()),
+              );
+            },
           ),
           backgroundColor: Colors.white,
           elevation: 0,
@@ -56,7 +66,7 @@ class priceItem extends StatefulWidget {
   final String item;
   final int point;
 
-  priceItem({this.item, this.point});
+  priceItem({required this.item, required this.point});
 
   @override
   State<priceItem> createState() => _priceItemState();
