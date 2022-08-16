@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:zerotronics_application/bantuan.dart';
-import 'package:zerotronics_application/home.dart';
 import 'package:zerotronics_application/welcome.dart';
 
 void main() {
