@@ -22,6 +22,8 @@ class _WelcomeState extends State<Welcome> {
             width: double.infinity,
             height: double.infinity,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image(image: AssetImage('logo.png')),
                 SizedBox(height:40),
