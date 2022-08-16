@@ -23,7 +23,7 @@ Contoh: Justin Bieber (13521999), Front end
 <br>
 
 Cara menjalankan aplikasi:  
-Berhubung aplikasi yang dibuat belum versi _FullRelease_ dan masih dalam tahapan _development_ (sejauh ini baru _FrontEnd_ kasar), untuk menjalankannya dapat menggunakan _terminal_, pengguna cukup memasukkan satu dari dua varian _command line_ berikut pada _terminal_:
+Berhubung aplikasi yang dibuat belum versi _FullRelease_ dan masih dalam tahapan _development_ (sejauh ini baru _FrontEnd_ kasar), untuk menjalankannya dapat menggunakan _terminal_, pengguna cukup memasukkan satu dari dua varian _command line_ berikut pada _terminal_ (dijalankan pada directory `src/zerotronics_application`):
 1. `flutter run -d chrome`
 2. `flutter run -d edge`<br><br>
 Setelah itu, nyalakan device emulation dan emulate mobile pada browser (device emulation pada edge dapat diaktifkan dengan `ctrl+shift+I` lalu `ctrl+shift+M`)
